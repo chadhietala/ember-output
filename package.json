@@ -10,12 +10,13 @@
     "doc": "doc",
     "test": "tests"
   },
+  "main": "ember-cli-build.js",
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
-    "start": "ember serve",
+    "start": "JOBS=1 ember serve",
     "test": "npm-run-all lint:* test:*",
     "test:ember": "ember test"
   },
